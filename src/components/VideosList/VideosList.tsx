@@ -7,7 +7,11 @@ export type VideosListProps = {
 
 export const VideosList = ({ videos }: VideosListProps) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
       {videos.map((video) => (
         <VideoCard key={video.slug} video={video} />
       ))}

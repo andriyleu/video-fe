@@ -1,19 +1,16 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { Container, Navbar } from "react-bootstrap";
-
 import type { AppProps } from "next/app";
+import { NavBar } from "components/NavBar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar bg="primary" variant="dark">
-        <Container>
-          <Navbar.Brand href="/">YouVideo</Navbar.Brand>
-        </Container>
-      </Navbar>
-      <Component {...pageProps} />;
+      <NavBar />
+      <div style={{ margin: "32px" }}>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

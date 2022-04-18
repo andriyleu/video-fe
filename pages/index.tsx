@@ -18,11 +18,9 @@ const EXAMPLE_VIDEO: Video = {
 
 const Home: NextPage = () => {
   return (
-    <>
-      <h1>Hello world!</h1>
-      <VideoPlayer video={EXAMPLE_VIDEO} />
-      <VideosList videos={[EXAMPLE_VIDEO]} />
-    </>
+    <VideosList
+      videos={[EXAMPLE_VIDEO, EXAMPLE_VIDEO, EXAMPLE_VIDEO, EXAMPLE_VIDEO]}
+    />
   );
 };
 

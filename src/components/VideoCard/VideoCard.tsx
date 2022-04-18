@@ -9,14 +9,12 @@ export const VideoCard = ({
   video: { title, description, thumbnail },
 }: VideoProps) => {
   return (
-    <div>
-      <Card>
-        <Card.Img variant="top" src={thumbnail} />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
+    <Card>
+      <Card.Img variant="top" src={thumbnail} />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{description}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
