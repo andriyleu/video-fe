@@ -1,8 +1,9 @@
-import type { Video } from "types/Video";
+import Link from "next/link";
+import type { Video } from "types/video";
 import { VideoCard } from "components/VideoCard";
 
 export type VideosListProps = {
-  videos: Video[];
+  videos: { id: number; attributes: Video }[];
 };
 
 export const VideosList = ({ videos }: VideosListProps) => {
@@ -13,7 +14,11 @@ export const VideosList = ({ videos }: VideosListProps) => {
       }}
     >
       {videos.map((video) => (
-        <VideoCard key={video.slug} video={video} />
+        <Link key={video.attributes.slug} href={`/${video.id}`} passHref>
+          <a>
+            <VideoCard video={video.attributes} />
+          </a>
+        </Link>
       ))}
     </div>
   );
