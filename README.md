@@ -13,6 +13,7 @@ Things to remark:
 - In terms of app logic I think everything is pretty much simple and easy to maintain, using React-Query makes things like refetching videos list after adding a new one just one line and these kind logic are out of components.
 - As I didn't write too much CSS I directly used CSS files but if this was a work project I'd be using some library liked StyledComponents, Stitches, Tailwind, etc doesn't really matter which one. But something like CSS-in-JSX is cool since you can verify the syntax of the CSS.
 - The FE part is not totally correct since Strapi offers REST by default and the page size by default is 25 so frontend just shows the first page. So pagination is missing in FE.
+- Following Git Flow and Conventional Commits
 - Everything from bonus has been done :)
 
 Things to improve:
