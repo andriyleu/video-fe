@@ -59,8 +59,8 @@ describe("EditVideoPopUp", () => {
       target: { value: EXAMPLE_SUBMIT_VALUE.thumbnail },
     });
 
-    fireEvent.change(screen.getByLabelText("Thumbnail"), {
-      target: { value: EXAMPLE_SUBMIT_VALUE.thumbnail },
+    fireEvent.change(screen.getByLabelText("Slug"), {
+      target: { value: EXAMPLE_SUBMIT_VALUE.slug },
     });
 
     fireEvent.click(screen.getByLabelText("Is public?"));

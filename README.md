@@ -21,6 +21,7 @@ Things to improve:
 - All literals should've been converted into i18 constants.
 - Adding local CI with husky, eslint, prettier, etc
 - Design of the app is totally not the best and it is half responsive, needed to work a bit more on this and even customize it as it's Bootstrap.
+- Stuff like API_ENDPOINT in real application would be taken from env instead of hardcoding a constant
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

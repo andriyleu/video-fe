@@ -1,9 +1,10 @@
 export const EXAMPLE_SUBMIT_VALUE = {
-  title: "title",
   description: "description",
-  url: "url",
-  thumbnail: "thumbnail",
   isPublic: false,
+  slug: "slug",
+  thumbnail: "thumbnail",
+  title: "title",
+  url: "url",
 };
 
 export const EXAMPLE_VIDEO = {

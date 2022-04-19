@@ -41,6 +41,10 @@ describe("CreateVideoPopUp", () => {
       target: { value: EXAMPLE_SUBMIT_VALUE.url },
     });
 
+    fireEvent.change(screen.getByLabelText("Slug"), {
+      target: { value: EXAMPLE_SUBMIT_VALUE.slug },
+    });
+
     fireEvent.change(screen.getByLabelText("Thumbnail"), {
       target: { value: EXAMPLE_SUBMIT_VALUE.thumbnail },
     });
