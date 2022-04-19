@@ -1,3 +1,27 @@
+Project Stack:
+
+- Next.js
+- Typescript
+- React-Query in order to handle backends calls
+- React-Hook-Form in order to handle forms
+- Boostrap & React Boostrap to have some accesible components without having to do them adhoc for this challenge
+- Jest & React Testing library to test components
+- fetch-mock to intercept fetch calls
+
+Things to remark:
+
+- In terms of app logic I think everything is pretty much simple and easy to maintain, using React-Query makes things like refetching videos list after adding a new one just one line and these kind logic are out of components.
+- As I didn't write too much CSS I directly used CSS files but if this was a work project I'd be using some library liked StyledComponents, Stitches, Tailwind, etc doesn't really matter which one. But something like CSS-in-JSX is cool since you can verify the syntax of the CSS.
+- The FE part is not totally correct since Strapi offers REST by default and the page size by default is 25 so frontend just shows the first page. So pagination is missing in FE.
+- Everything from bonus has been done :)
+
+Things to improve:
+
+- There are quite a lot of tests even thought more things could've been tested.
+- All literals should've been converted into i18 constants.
+- Adding local CI with husky, eslint, prettier, etc
+- Design of the app is totally not the best and it is half responsive, needed to work a bit more on this and even customize it as it's Bootstrap.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
