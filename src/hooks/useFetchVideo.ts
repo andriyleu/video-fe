@@ -1,4 +1,4 @@
-import { API_ENDPOINT } from "api/client";
+import { API_ENDPOINT } from "api/constants";
 import { ItemResponse } from "types/pagination";
 import { Video } from "types/video";
 import { useQuery } from "react-query";
