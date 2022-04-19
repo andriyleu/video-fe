@@ -1,40 +1,33 @@
 import { Button, Modal } from "react-bootstrap";
 
-import { Video } from "types/video";
 import { VideoForm } from "components/VideoForm/VideoForm";
-import { useEditVideo } from "hooks/useEditVideo";
+import { useCreateVideo } from "hooks/useCreateVideo";
 import { useState } from "react";
 
-export type EditVideoPopUpProps = {
-  id: string;
-  defaultValues: Video;
-};
-
-export const EditVideoPopUp = ({ id, defaultValues }: EditVideoPopUpProps) => {
+export const CreateVideoPopUp = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const updateVideoMutation = useEditVideo(id);
+  const createVideoMutation = useCreateVideo();
 
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        <i className="bi bi-pen" />
-        Edit video
+        <i className="bi bi-plus-circle" />
+        Create video
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Edit video</Modal.Title>
+          <Modal.Title>Create video</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <VideoForm
-            actionTitle="Edit"
-            defaultValues={defaultValues}
+            actionTitle="Create"
             onSubmit={(values) => {
-              updateVideoMutation.mutate(values);
+              createVideoMutation.mutate(values);
               handleClose();
             }}
           />

@@ -1,20 +1,6 @@
 import type { NextPage } from "next";
-import { Spinner } from "react-bootstrap";
-import { VideosList } from "components/VideosList";
-import { useFetchVideosList } from "hooks/useFetchVideosList";
+import { VideosListScreen } from "screens/VideosListScreen";
 
-const Home: NextPage = () => {
-  const { videos, isLoading, error } = useFetchVideosList();
-
-  if (isLoading) {
-    return <Spinner animation="border" />;
-  }
-
-  if (error || !videos) {
-    return <span>An error has ocurred!</span>;
-  }
-
-  return <VideosList videos={videos.data} />;
-};
+const Home: NextPage = () => <VideosListScreen />;
 
 export default Home;

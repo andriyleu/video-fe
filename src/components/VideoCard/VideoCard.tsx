@@ -9,8 +9,8 @@ export const VideoCard = ({
   video: { title, description, thumbnail },
 }: VideoProps) => {
   return (
-    <Card style={{}}>
-      <Card.Img variant="top" src={thumbnail} />
+    <Card>
+      <Card.Img variant="top" src={thumbnail} alt={description} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>

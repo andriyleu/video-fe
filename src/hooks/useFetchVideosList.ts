@@ -1,16 +1,15 @@
-import { AxiosResponse } from "axios";
+import { API_ENDPOINT } from "api/client";
 import { PaginatedResponse } from "types/pagination";
 import { Video } from "types/video";
-import apiClient from "api/client";
 import { useQuery } from "react-query";
 
-const fetchVideosList = () => apiClient.get("/videos");
+const fetchVideosList = () => fetch(`${API_ENDPOINT}/videos`);
 
 export const useFetchVideosList = () => {
-  const response = useQuery<AxiosResponse<PaginatedResponse<Video>>>(
-    "videos",
-    () => fetchVideosList()
-  );
+  const response = useQuery<PaginatedResponse<Video>>("videos", async () => {
+    const response = await fetchVideosList();
+    return response.json();
+  });
 
   return {
     ...response,
