@@ -7,7 +7,7 @@ const postVideo = (params: Partial<Video>) =>
   fetch(`${API_ENDPOINT}/videos`, {
     method: "POST",
     body: JSON.stringify({
-      ...params,
+      data: params,
     }),
     headers: {
       "Content-Type": "application/json",

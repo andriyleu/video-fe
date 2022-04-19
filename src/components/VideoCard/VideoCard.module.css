@@ -1,11 +1,14 @@
 .card {
   width: 18rem;
-  height: 300px;
+  height: 20rem;
 }
 
-@media (max-width: 620px) {
-  .card {
-    width: 100%;
-    height: 100%;
-  }
+.ellipsisText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.thumbnail {
+  max-width: 100%;
 }

@@ -16,6 +16,7 @@ const EMPTY_VALUES = {
   isPublic: false,
   url: "",
   thumbnail: "",
+  slug: "",
 };
 
 export const VideoForm = ({
@@ -55,6 +56,15 @@ export const VideoForm = ({
           <Form.Control
             placeholder=".mp4 file"
             {...register("url", { required: true })}
+          />
+        </Form.Label>
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Label className={styles.label}>
+          Slug
+          <Form.Control
+            placeholder="Slug"
+            {...register("slug", { required: true })}
           />
         </Form.Label>
       </Form.Group>

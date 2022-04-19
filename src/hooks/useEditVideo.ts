@@ -1,12 +1,13 @@
 import { useMutation, useQueryClient } from "react-query";
 
+import { API_ENDPOINT } from "api/client";
 import { Video } from "types/video";
 
 const putVideo = (id: string, params: Partial<Video>) =>
-  fetch(`/videos/${id}`, {
+  fetch(`${API_ENDPOINT}/videos/${id}`, {
     method: "PUT",
     body: JSON.stringify({
-      ...params,
+      data: params,
     }),
     headers: {
       "Content-Type": "application/json",
