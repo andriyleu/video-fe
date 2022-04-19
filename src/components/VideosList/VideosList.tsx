@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Video } from "types/video";
 import { VideoCard } from "components/VideoCard";
+import styles from "./VideosList.module.css";
 
 export type VideosListProps = {
   videos: { id: number; attributes: Video }[];
@@ -8,11 +9,7 @@ export type VideosListProps = {
 
 export const VideosList = ({ videos }: VideosListProps) => {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <div className={styles.videoList}>
       {videos.map((video) => (
         <Link key={video.attributes.slug} href={`/${video.id}`} passHref>
           <a>

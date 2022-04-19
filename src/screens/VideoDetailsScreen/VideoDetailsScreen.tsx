@@ -2,6 +2,7 @@ import { Alert } from "react-bootstrap";
 import { EditVideoPopUp } from "components/EditVideoPopUp";
 import { LoadingSpinner } from "components/LoadingSpinner";
 import { VideoPlayer } from "components/VideoPlayer";
+import styles from "./VideoDetailsScreen.module.css";
 import { useFetchVideo } from "hooks/useFetchVideo";
 
 export type VideoDetailsScreenProps = {
@@ -24,9 +25,9 @@ export const VideoDetailsScreen = ({ id }: VideoDetailsScreenProps) => {
   }
 
   return (
-    <>
-      <VideoPlayer video={video.attributes} />
+    <div className={styles.detailsWrapper}>
       <EditVideoPopUp id={id} defaultValues={video.attributes} />
-    </>
+      <VideoPlayer video={video.attributes} />
+    </div>
   );
 };

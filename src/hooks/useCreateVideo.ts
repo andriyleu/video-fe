@@ -1,6 +1,6 @@
-import apiClient, { API_ENDPOINT } from "api/client";
 import { useMutation, useQueryClient } from "react-query";
 
+import { API_ENDPOINT } from "api/client";
 import { Video } from "types/video";
 
 const postVideo = (params: Partial<Video>) =>

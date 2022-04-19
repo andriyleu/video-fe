@@ -1,7 +1,6 @@
 import { useMutation, useQueryClient } from "react-query";
 
 import { Video } from "types/video";
-import apiClient from "api/client";
 
 const putVideo = (id: string, params: Partial<Video>) =>
   fetch(`/videos/${id}`, {

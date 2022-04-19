@@ -2,6 +2,7 @@ import { Alert } from "react-bootstrap";
 import { CreateVideoPopUp } from "components/CreateVideoPopUp";
 import { LoadingSpinner } from "components/LoadingSpinner";
 import { VideosList } from "components/VideosList";
+import styles from "./VideosListScreen.module.css";
 import { useFetchVideosList } from "hooks/useFetchVideosList";
 
 export const VideosListScreen = () => {
@@ -20,9 +21,9 @@ export const VideosListScreen = () => {
   }
 
   return (
-    <>
+    <div className={styles.listScreenContainer}>
       <CreateVideoPopUp />
       <VideosList videos={videos} />
-    </>
+    </div>
   );
 };

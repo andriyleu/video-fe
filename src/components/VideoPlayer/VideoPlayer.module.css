@@ -1,0 +1,17 @@
+.videoPlayerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.videoInfo {
+  min-width: 256px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .videoPlayerWrapper {
+    flex-direction: row;
+  }
+}

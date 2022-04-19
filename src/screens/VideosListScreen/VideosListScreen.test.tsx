@@ -1,10 +1,6 @@
-import {
-  EXAMPLE_VIDEO,
-  EXAMPLE_VIDEOS_RESPONSE,
-  EXAMPLE_VIDEO_RESPONSE,
-} from "fixtures/videos";
 import { render, screen, waitForLoadingToFinish } from "appTestUtils";
 
+import { EXAMPLE_VIDEOS_RESPONSE } from "fixtures/videos";
 import { VideosListScreen } from "screens/VideosListScreen";
 import fetchMock from "fetch-mock";
 
